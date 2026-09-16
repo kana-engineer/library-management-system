@@ -1,12 +1,27 @@
 function Dashboard() {
     return(
         <>
-            <div className="grid grid-row">
-                <div className="border-r-1 ">
+            <div className="grid grid-cols-[400px_2fr]">
+                <div className="border-r-1">
 
                 </div>
-                <div>
-
+                <div className="grid grid-cols-4 gap-20 p-20 w-350">
+                    <div className="border-1 rounded flex flex-col items-center justify-center h-50 gap-5 shadow-2xl">
+                        <h1 className="text-4xl">120</h1>
+                        <p>Books 📚</p>
+                    </div>
+                    <div className="border-1 rounded flex flex-col items-center justify-center h-50 gap-5 shadow-2xl">
+                        <h1 className="text-4xl">35</h1>
+                        <p>Authors ✍️</p>
+                    </div>
+                    <div className="border-1 rounded flex flex-col items-center justify-center h-50 gap-5 shadow-2xl">
+                        <h1 className="text-4xl">86</h1>
+                        <p>Users 👤</p>
+                    </div>
+                    <div className="border-1 rounded flex flex-col items-center justify-center h-50 gap-5 shadow-2xl">
+                        <h1 className="text-4xl">24</h1>
+                        <p>Borrowed 📖</p>
+                    </div>
                 </div>
             </div>
         </>
