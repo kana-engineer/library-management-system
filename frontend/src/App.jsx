@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
 import Navbar from "./components/Navbar.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
 function App() {
 
   return (
-     <Navbar/>
+      <>
+        <Navbar/>
+        <Dashboard/>
+      </>
   )
 }
 
