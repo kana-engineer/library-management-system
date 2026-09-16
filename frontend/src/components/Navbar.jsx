@@ -1,3 +1,5 @@
+import {NavLink} from "react-router-dom"
+
 function Navbar() {
     return (
         <>
@@ -5,9 +7,21 @@ function Navbar() {
                 <h1 className="text-xl font-semibold">📚 Library Management</h1>
                 <div>
                     <ul className="flex gap-20">
-                        <li><a className="#">Books</a></li>
-                        <li><a className="#">Authors</a></li>
-                        <li><a className="#">Users</a></li>
+                        <li><NavLink className={({isActive}) => isActive ? "border-b-1" : "border-none"} to="/">
+                            Home
+                        </NavLink></li>
+                        <li><NavLink className={({isActive}) => isActive ? "border-b-1" : "border-none"} to="/books">
+                            Books
+                        </NavLink></li>
+                        <li><NavLink className={({isActive}) => isActive ? "border-b-1" : "border-none"} to="/authors">
+                            Authors
+                        </NavLink></li>
+                        <li><NavLink className={({isActive}) => isActive ? "border-b-1" : "border-none"} to="/borrowed">
+                            Borrowed
+                        </NavLink></li>
+                        <li><NavLink className={({isActive}) => isActive ? "border-b-1" : "border-none"} to="/users">
+                            Users
+                        </NavLink></li>
                     </ul>
                 </div>
             </div>
