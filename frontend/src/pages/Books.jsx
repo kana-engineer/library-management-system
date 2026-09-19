@@ -8,6 +8,7 @@ function Books() {
         fetch("http://localhost:8080/api/books").then(responce => {
             return responce.json();
         }).then(data => {
+            console.log("API data:", data);
             setBooks(data);
         })
     }, []);

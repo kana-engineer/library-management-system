@@ -16,9 +16,10 @@ public class Book {
 
     }
 
-    public Book(String title, int publicationYear) {
+    public Book(String title, int publicationYear, Long id) {
         this.title = title;
         this.publicationYear = publicationYear;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -27,5 +28,15 @@ public class Book {
 
     public int getPublicationYear() {
         return publicationYear;
+    }
+
+    public Long getId() { return id; }
+    
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
     }
 }
