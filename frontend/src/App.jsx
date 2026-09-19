@@ -14,11 +14,11 @@ function App() {
       <>
         <BrowserRouter>
             <Navbar/>
-            <div className="grid grid-cols-[400px_2fr]">
-                <div className="border-r-1">
+            <div className="grid grid-cols-[400px_2fr] h-238 ">
+                <div className="border-r-1 fixed left-0 right-0 h-screen w-84">
                     <MainSection/>
                 </div>
-                <div>
+                <div className="ml-285 mt-30">
                     <Routes>
                         <Route path="/" element={<Dashboard />} />
                         <Route path="/books" element={<Books/>}/>

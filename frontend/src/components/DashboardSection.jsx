@@ -3,7 +3,7 @@ import Table from "./Table.jsx";
 function DashboardSection() {
     return(
         <>
-            <div>
+            <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center flex-col p-15 gap-4">
                     <h1 className="text-5xl">Dashboard</h1>
                     <p>Welcome back! Here's what's happening today.</p>

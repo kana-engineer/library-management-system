@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="Application" factoryName="Application">
+    <envs>
+      <env name="DB_USERNAME" value="postgres" />
+      <env name="DB_PASSWORD" value="Donaterlife002" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="net.procelyte.librarymanagementsystem.LibraryManagementSystemApplication" />
+    <module name="library-management-system" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom"
 function Navbar() {
     return (
         <>
-            <div className="flex justify-around px-4 py-6 border-b-1">
+            <div className="flex justify-around px-4 py-6 border-b-1 fixed left-0 right-0 bg-white z-1">
                 <h1 className="text-xl font-semibold">📚 Library Management</h1>
                 <div>
                     <ul className="flex gap-20">

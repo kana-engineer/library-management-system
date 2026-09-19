@@ -1,9 +1,16 @@
-import MainSection from "../components/MainSection.jsx";
-import DashboardSection from "../components/DashboardSection.jsx";
 import BooksSet from "../components/BooksSet.jsx";
 import Table from "../components/Table.jsx";
+import {useState, useEffect} from "react";
 
 function Books() {
+    const [books, setBooks] = useState([]);
+    useEffect(() => {
+        fetch("http://localhost:8080/api/books").then(responce => {
+            return responce.json();
+        }).then(data => {
+            setBooks(data);
+        })
+    }, []);
     return(
         <>
             <div className="flex items-center justify-center flex-col p-15 gap-4">
@@ -19,7 +26,7 @@ function Books() {
                     <i className='bx bx-add-to-queue text-red-500'></i>
                     <BooksSet/>
                 </div>
-                <Table/>
+                <Table books={books}/>
             </div>
         </>
     )
