@@ -25,7 +25,7 @@ function App() {
                         <Route path="/authors" element={<Authors/>}/>
                         <Route path="/borrowed" element={<Borrowed/>}/>
                         <Route path="/users" element={<Users/>}/>
-                        <Route path="/add-books" element={<AddBooks/>}/>
+                        <Route path="books/add-books" element={<AddBooks/>}/>
                     </Routes>
                 </div>
             </div>
