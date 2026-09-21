@@ -1,8 +1,10 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 function AddBooks() {
     const [title, setTitle] = useState("");
     const [publicationYear, setPublicationYear] = useState("");
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -21,6 +23,7 @@ function AddBooks() {
             .then(response => response.json())
             .then(data => {
                 console.log("Created book:", data);
+                navigate("/books")
             });
 
         console.log(book);
