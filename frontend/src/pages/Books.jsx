@@ -27,7 +27,7 @@ function Books() {
                     <i className='bx bx-add-to-queue text-red-500'></i>
                     <BooksSet/>
                 </div>
-                <Table books={books}/>
+                <Table books={books} setBooks={setBooks}/>
             </div>
         </>
     )
