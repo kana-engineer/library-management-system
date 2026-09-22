@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Table({books = [], setBooks}) {
     const handleDelete = (id) => {
         fetch(`http://localhost:8080/api/books/${id}`, {
@@ -43,11 +45,25 @@ function Table({books = [], setBooks}) {
                         <td className="px-6 py-4 text-sm text-gray-600">
                             {book.publicationYear}
                         </td>
-                        <td className="px-6 py-4 text-red-500">
-                            <button onClick={() => handleDelete(book.id)}>
-                                Delete
-                            </button>
+                        <td className="px-6 py-4">
+                            <div className="flex gap-4">
+                                <NavLink
+                                    className="text-blue-500"
+                                    to={`/books/edit/${book.id}`}
+                                >
+                                    Edit
+                                </NavLink>
+
+                                <button
+                                    className="text-red-500 cursor-pointer"
+                                    onClick={() => handleDelete(book.id)}
+                                >
+                                    Delete
+                                </button>
+                            </div>
                         </td>
+
+
                     </tr>
                 ))}
                 </tbody>

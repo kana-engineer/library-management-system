@@ -7,6 +7,7 @@ import Borrowed from "./pages/Borrowed.jsx";
 import Users from "./pages/Users.jsx";
 import AddBooks from "./pages/AddBooks.jsx";
 import MainSection from "./components/MainSection.jsx";
+import EditBook from "./pages/EditBook.jsx";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                         <Route path="/borrowed" element={<Borrowed/>}/>
                         <Route path="/users" element={<Users/>}/>
                         <Route path="books/add-books" element={<AddBooks/>}/>
+                        <Route path={"books/edit/:id"} element={<EditBook/>}/>
                     </Routes>
                 </div>
             </div>
